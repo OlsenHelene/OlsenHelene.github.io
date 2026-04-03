@@ -1,0 +1,160 @@
+\documentclass[a4paper,15pt]{article}
+%A Few Useful Packages
+\usepackage{marvosym}
+\usepackage{enumitem}
+\usepackage{fontspec} 					%for loading fonts
+\usepackage{xunicode,xltxtra,url,parskip} 	%other packages for formatting
+\RequirePackage{color,graphicx}
+\usepackage[usenames,dvipsnames]{xcolor}
+%\usepackage[big]{layaureo} 				%better formatting of the A4 page
+% an alternative to Layaureo can be ** \usepackage{fullpage} **
+\usepackage{supertabular} 				%for Grades
+\usepackage{titlesec}					%custom \section
+ \usepackage{fullpage}
+%Setup hyperref package, and colours for links
+\usepackage{hyperref}
+\definecolor{linkcolour}{rgb}{0,0.2,0.6}
+\hypersetup{colorlinks,breaklinks,urlcolor=linkcolour, linkcolor=linkcolour}
+%% For fancy personal date
+\usepackage{genealogytree} % Born
+ \usepackage{ifsym} % House
+ \usepackage{fontawesome}
+\usepackage{ wasysym } % Phone
+\usepackage{ marvosym } % Email
+%FONTS
+\defaultfontfeatures{Mapping=tex-text}
+\setmainfont{Palatino Linotype}
+\usepackage{lipsum}
+\newcommand\blfootnote[1]{%
+  \begingroup
+  \renewcommand\thefootnote{}\footnote{#1}%
+  \addtocounter{footnote}{-1}%
+  \endgroup
+}
+%CV Sections inspired by:
+%http://stefano.italians.nl/archives/26
+\titleformat{\section}{\Large\scshape\raggedright}{}{0em}{}[\titlerule]
+\titlespacing{\section}{0pt}{3pt}{3pt}
+%Tweak a bit the top margin
+%\addtolength{\voffset}{-1.3cm}
+%Italian hyphenation for the word: ''corporations''
+\hyphenation{im-pre-se}
+%-------------WATERMARK TEST [**not part of a CV**]---------------
+\usepackage[absolute]{textpos}
+\setlength{\TPHorizModule}{30mm}
+\setlength{\TPVertModule}{\TPHorizModule}
+\textblockorigin{1mm}{1\paperheight}
+\setlength{\parindent}{0pt}
+%--------------------BEGIN DOCUMENT----------------------
+\begin{document}
+\pagestyle{empty} % non-numbered pages
+\font\fb=''[cmr10]'' %for use with \LaTeX command
+%--------------------TITLE-------------
+\par{\centering
+		{\Huge Helene Olsen Kalstad
+	}\bigskip\par}
+%--------------------SECTIONS-----------------------------------
+%Section: Personal Data
+\section{Personal Data}
+\begin{tabular}{c l}
+    \textsc{\phone}     & +47 402 04 568\\
+      \textsc{\Letter}   &    \href{mailto:helene.oo@hotmail.com}{helene.oo@hotmail.com}\\
+\end{tabular}
+\section{Profile}
+\small{
+PhD candidate in Economics with strong quantitative and applied macroeconomic training, specialised in time-series analysis, forecasting, and empirical analysis of global shocks. Experienced in translating complex economic models into decision-relevant insights. Seeking roles where rigorous data analysis supports strategic and operational decision-making.
+}
+%Section: Education
+\section{Education}
+\begin{tabular}{p{2.4cm} | p{12.9cm} }
+ \small{\textsc{Current}}   & PhD in \textsc{Economics} (expected completion: December 2026)\\
+ \small{\textsc{Aug. 2022 }} & \textbf{BI Norwegian Business School}, Oslo \\
+ &  \footnotesize{\textsc{Supervisor}}:\footnotesize{ Professor Hilde C. Bjørnland (BI Norwegian Business School)}\\
+ &  \footnotesize{\textsc{Co-supervisor}}:\footnotesize{ Dr. Knut Are Aastveit (Deputy Director Norges Bank Research)}\\
+\end{tabular}
+\begin{tabular}{p{2.4cm} | p{12.9cm} }
+ \small{\textsc{Nov. 2021}}   & Master of Philosophy in \textsc{Economics}\\
+ \small{\textsc{Aug. 2020 }} & \textbf{Bocconi University}, Milan \\
+\end{tabular}
+\begin{tabular}{p{2.4cm} | p{12.9cm} }
+\small{\textsc{Jun. 2019 }}  & Master of Science (with Honours) in \textsc{Business} Majoring in \textsc{Economics}\\
+\small{\textsc{Aug. 2017 }} & \textbf{BI Norwegian Business School} - \textbf{GPA: 4.875/5.000} \\
+ &  \footnotesize{\textsc{Electives}}:\footnotesize{ Game Theory, Behavioral Economics, Introduction to Asset Prices, Data Analysis in Python, and Energy in Green Transition.}\\
+ & \footnotesize{\textsc{Master Thesis}}:\footnotesize{ \emph{The Impact of Monetary Policy on Leading Variables for Financial Stability in Norway}}
+ \multicolumn{2}{c}{} \\
+\small{\textsc{Jun. 2017}}& Bachelor of Science in \textsc{Business and Economics,}  \\
+\small{\textsc{Aug. 2014}} & \textbf{BI Norwegian Business School} - \textbf{GPA: 4.583/5.000 }\\
+\end{tabular}
+%Section: Work Experience at the top
+\section{Work Experience}
+\begin{tabular}{p{2.4cm} | p{12.9cm} }
+  \small{\textsc{Jan. 2022}} & Research Assistant at \textbf{BI Norwegian Business School}, Oslo\\
+  \small{\textsc{Jun. 2018}}& \emph{Centre for Applied Macroeconomics and Commodity Prices (CAMP)}\\
+  &\emph{Professor Hilde C. Bjørnland and Professor Leif Anders Thorsrud}\\
+  & \footnotesize{Research support and empirical analysis on macroeconomic and commodity-price dynamics, including VAR-based modelling and data construction.}
+   \end{tabular}
+
+   \begin{tabular}{p{2.4cm} | p{12.9cm} }
+ \small{\textsc{Jul. 2022}} & Research Assistant at \textbf{Norges Bank}, Oslo\\
+  \small{\textsc{Jan. 2022}}& \emph{Research Department, Full time}\\
+& \footnotesize{Empirical analysis of macroeconomic and financial data, including time-series modelling, forecasting, and construction of financial indicators used in internal analysis.}
+
+     \end{tabular}
+     \begin{tabular}{p{2.4cm} | p{12.9cm} }
+ \small{\textsc{Aug. 2020}} & Junior Researcher at \textbf{Norges Bank}, Oslo \\\small{\textsc{Aug. 2019}}&\emph{Research Department, Full time}\\\multicolumn{2}{c}{} \\
+\end{tabular}
+
+   \begin{tabular}{p{2.4cm} | p{12.9cm} }
+  \small{\textsc{Dec. 2018}}&\emph{Research Assistant at \textbf{BI Norwegian Business School}, Oslo} \\ \small{\textsc{Aug. 2018}} & \emph{Centre for Monetary Economics (CME)}\\ & \emph{Professor Tommy Sveen}
+ \end{tabular}
+
+
+    \begin{tabular}{p{2.4cm} | p{12.9cm} }
+ \small{\textsc{Jun. 2018}} & Research Assistant at \textbf{BI Norwegian Business School}, Oslo\\
+\small{\textsc{Jan. 2018}} &\emph{Professor Jon H. Fiva}
+\end{tabular}\\
+\section{Work in progress}
+\small{
+\textbf{Labour markets, AI and productivity in small open economies} (early-stage project).\\
+\emph{Description:} Examines whether the diffusion of generative AI is associated with sectoral productivity and employment dynamics in the United States and Norway, using an event-study framework.
+}\par\vspace{0.5em}
+\small{
+\textbf{Is the Exchange Rate a Shock Absorber, or a Source of Instability? Iceland versus Sweden} (with Hilde C. Bjørnland).\\
+\emph{Description:} Examines whether a floating exchange rate stabilises or destabilises a small open economy.
+}\par\vspace{0.5em}
+\small{
+\textbf{FDI, exchange rates and global shocks in commodity-exporting economies} (with Hilde C. Bjørnland, Kjetil Martinsen and Francesco Ravazzolo).\\
+\emph{Description:} Empirical analysis using mixed-frequency macro and financial data to quantify how foreign investment and global shocks affect exchange rates and financial conditions. Combines local projections and VAR-based methods with relevance for risk assessment and international investment analysis.
+}
+\section{Publications}
+\small{
+\textbf{Unveiling inflation: Oil shocks, supply chain pressures, and expectations} (with Knut Are Aastveit, Hilde C. Bjørnland and Jamie L. Cross), \emph{European Economic Review}, Vol.\ 181, 2026.
+\href{https://www.sciencedirect.com/science/article/pii/S0014292125002429}{Link to article}.\\
+\emph{Earlier version:} \href{https://www.norges-bank.no/aktuelt/nyheter-og-hendelser/Signerte-publikasjoner/Working-Papers/2024/wp-122024/}{Norges Bank Working Paper 12/2024}.\\
+\emph{Summary:} Using a Bayesian structural VAR for six advanced, inflation-targeting economies, we show that global oil and supply chain shocks were major drivers of the post-pandemic inflation surge, and that inflation expectations amplified these effects in several countries.
+}\par\vspace{0.5em}
+\small{
+\href{https://www.norges-bank.no/aktuelt/publikasjoner/Staff-Memo/20232/sm-1-2023-fcin/}{\textbf{A high-frequency financial conditions index for Norway}} (with Frida Bowe, Karsten R. Gerdrup and Nicol\`o Maffei-Faccioli), Norges Bank Staff Memo 1/2023.\\
+\emph{Summary:} Constructs a daily financial conditions index combining market prices and spreads to track short-run changes in Norwegian financial tightness and its co-movement with macro indicators.
+}\par\vspace{0.5em}
+\small{
+\href{https://hdl.handle.net/11250/2647912}{\textbf{The impact of monetary policy on leading variables for financial stability in Norway}} (with Harald Wieslander), CAMP Working Paper Series 02/2020.\\
+\emph{Summary:} Assesses how monetary policy shocks affect forward-looking financial stability indicators in Norway, documenting heterogeneous and state-dependent responses across variables.
+}
+\section{Areas of interest}
+\small{Applied macroeconomics, international economics, time-series analysis, forecasting, and data-driven decision-making. Interests include productivity, business cycles, financial conditions, and the interaction between global shocks and firm- and market-level outcomes.}   \\
+%Section: Languages
+\section{Languages}
+\begin{tabular}{p{4.5cm} l}
+ \textsc{Native proficiency: }& Norwegian\\
+ \textsc{Full professional proficiency: }& English \\
+ \textsc{Independent user: }& Spanish \\
+\end{tabular}
+\section{Technical skills}
+\begin{tabular}{p{4.5cm} l}
+\textsc{Data analysis: } & MATLAB, Python, Stata \\
+\textsc{Econometric modelling: } & VARs, local projections, mixed-frequency models, forecasting \\
+\textsc{Time-series analysis: } & Macroeconomic and financial data, shock identification \\
+\textsc{Reporting and visualisation: } & {\fb \LaTeX}, MATLAB \\
+\end{tabular}
+\end{document}
